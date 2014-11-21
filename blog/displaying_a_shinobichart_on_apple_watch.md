@@ -29,4 +29,5 @@ This should have created a couple of entitlements files, one in each target. Ver
 
 You can't take a snapshot of a ShinobiChart without adding that chart to the view hierarchy first. You can't add subviews to your WatchKit App. You have to define all of the interface elements in a storyboard. This means that the screenshot will have to be taken in the iPhone application, then sent to the WatchKit Extension.
 
-There's an [existing tutorial on how to take a screenshot of a ShinobiChart](http://www.shinobicontrols.com/blog/posts/2012/03/26/taking-a-shinobichart-screenshot-from-your-app) by Stuart already, so I won't cover that here.
+There's an [existing tutorial on how to take a screenshot of a ShinobiChart](http://www.shinobicontrols.com/blog/posts/2012/03/26/taking-a-shinobichart-screenshot-from-your-app) by Stuart already, so I won't cover that here. In the sample application, the chart screenshots are generated when a button is pressed in the `ViewController` class. These buttons are set up in the storyboard. 
+
