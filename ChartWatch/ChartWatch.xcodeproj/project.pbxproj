@@ -20,6 +20,11 @@
 		705F16D11A1F4015001BD29D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705F16D01A1F4015001BD29D /* Interface.storyboard */; };
 		705F16D31A1F4016001BD29D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705F16D21A1F4016001BD29D /* Images.xcassets */; };
 		705F16D61A1F4016001BD29D /* ChartWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 705F16BB1A1F4015001BD29D /* ChartWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		705F16E51A1F4581001BD29D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16E01A1F4580001BD29D /* libc++.dylib */; };
+		705F16E61A1F4581001BD29D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16E11A1F4581001BD29D /* QuartzCore.framework */; };
+		705F16E71A1F4581001BD29D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16E21A1F4581001BD29D /* OpenGLES.framework */; };
+		705F16E81A1F4581001BD29D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16E31A1F4581001BD29D /* CoreText.framework */; };
+		705F16ED1A1F4B74001BD29D /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16EC1A1F4B74001BD29D /* ShinobiCharts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,11 @@
 		705F16D21A1F4016001BD29D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		705F16DE1A1F4198001BD29D /* ChartWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ChartWatch.entitlements; sourceTree = "<group>"; };
 		705F16DF1A1F4210001BD29D /* ChartWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ChartWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		705F16E01A1F4580001BD29D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		705F16E11A1F4581001BD29D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		705F16E21A1F4581001BD29D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		705F16E31A1F4581001BD29D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		705F16EC1A1F4B74001BD29D /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = ../../ShinobiCharts.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705F16E81A1F4581001BD29D /* CoreText.framework in Frameworks */,
+				705F16ED1A1F4B74001BD29D /* ShinobiCharts.framework in Frameworks */,
+				705F16E61A1F4581001BD29D /* QuartzCore.framework in Frameworks */,
+				705F16E51A1F4581001BD29D /* libc++.dylib in Frameworks */,
+				705F16E71A1F4581001BD29D /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +145,7 @@
 				705F169E1A1F3E72001BD29D /* Images.xcassets */,
 				705F16A01A1F3E72001BD29D /* LaunchScreen.xib */,
 				705F16911A1F3E72001BD29D /* Supporting Files */,
+				705F16EA1A1F4594001BD29D /* Frameworks */,
 			);
 			path = ChartWatch;
 			sourceTree = "<group>";
@@ -187,6 +203,18 @@
 				705F16CF1A1F4015001BD29D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		705F16EA1A1F4594001BD29D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				705F16EC1A1F4B74001BD29D /* ShinobiCharts.framework */,
+				705F16E31A1F4581001BD29D /* CoreText.framework */,
+				705F16E01A1F4580001BD29D /* libc++.dylib */,
+				705F16E21A1F4581001BD29D /* OpenGLES.framework */,
+				705F16E11A1F4581001BD29D /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,6 +492,10 @@
 				CODE_SIGN_ENTITLEMENTS = ChartWatch/ChartWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+				);
 				INFOPLIST_FILE = ChartWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,6 +510,10 @@
 				CODE_SIGN_ENTITLEMENTS = ChartWatch/ChartWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+				);
 				INFOPLIST_FILE = ChartWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
