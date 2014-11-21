@@ -74,6 +74,8 @@
 		705F16CF1A1F4015001BD29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		705F16D01A1F4015001BD29D /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		705F16D21A1F4016001BD29D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		705F16DE1A1F4198001BD29D /* ChartWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ChartWatch.entitlements; sourceTree = "<group>"; };
+		705F16DF1A1F4210001BD29D /* ChartWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ChartWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		705F16901A1F3E72001BD29D /* ChartWatch */ = {
 			isa = PBXGroup;
 			children = (
+				705F16DE1A1F4198001BD29D /* ChartWatch.entitlements */,
 				705F16951A1F3E72001BD29D /* AppDelegate.h */,
 				705F16961A1F3E72001BD29D /* AppDelegate.m */,
 				705F16981A1F3E72001BD29D /* ViewController.h */,
@@ -151,6 +154,7 @@
 		705F16BF1A1F4015001BD29D /* ChartWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				705F16DF1A1F4210001BD29D /* ChartWatch WatchKit Extension.entitlements */,
 				705F16C21A1F4015001BD29D /* InterfaceController.h */,
 				705F16C31A1F4015001BD29D /* InterfaceController.m */,
 				705F16C51A1F4015001BD29D /* Images.xcassets */,
@@ -251,9 +255,21 @@
 				TargetAttributes = {
 					705F168D1A1F3E72001BD29D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = XJ74287KY8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					705F16BA1A1F4015001BD29D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = XJ74287KY8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					705F16C81A1F4015001BD29D = {
 						CreatedOnToolsVersion = 6.2;
@@ -445,9 +461,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChartWatch/ChartWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChartWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -455,9 +475,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChartWatch/ChartWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChartWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -496,6 +520,9 @@
 		705F16DB1A1F4016001BD29D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ChartWatch WatchKit Extension/ChartWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -503,6 +530,7 @@
 				INFOPLIST_FILE = "ChartWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -510,9 +538,13 @@
 		705F16DC1A1F4016001BD29D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ChartWatch WatchKit Extension/ChartWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ChartWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

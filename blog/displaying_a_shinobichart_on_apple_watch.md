@@ -8,5 +8,13 @@ You'll need to add a Watch App target to your application first. Select 'Add Tar
 
 ![Watch App Target Setup](images/add_watch_target.png "Adding a Watch App Target")
 
+###Setting up a Shared App Group
 
 [The WatchKit programming guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html "WatchKit Programming Guide") states that 'If your iOS app and WatchKit extension rely on the same data, use a shared app group to store that data. An app group is an area in the local file system that both the extension and app can access.'
+
+To set this up, select your iPhone app target, then capabilities. Find 'App Groups' in the list, and switch this to 'ON'. Once this is done, select the default option with the checkbox. You'll need to do the exact same thing for your WatchKit Extension target too.
+
+![App Group Setup](images/app_group_setup.png "Adding a Watch App Target")
+
+This should have created a couple of entitlements files, one in each target. Verify this and your iPhone app should now be ready to share data with your WatchKit Extension.
+
