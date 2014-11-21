@@ -31,6 +31,8 @@ You can't take a snapshot of a ShinobiChart without adding that chart to the vie
 
 There's an [existing tutorial on how to take a screenshot of a ShinobiChart](http://www.shinobicontrols.com/blog/posts/2012/03/26/taking-a-shinobichart-screenshot-from-your-app) by Stuart already, so I won't cover that here. In the sample application, the chart screenshots are generated when a button is pressed in the `ViewController` class. These buttons are set up in the storyboard. 
 
+![iPhone App UI](images/iPhone_app_ui.png "iPhone App UI")
+
 When a user taps one of these buttons, the chart type is set, `prepareForScreenshot` is called, which reloads and redraws the chart, then after a slight delay to let the chart render, `screenshot` is called.
 
 	/**
@@ -77,3 +79,53 @@ When a user taps one of these buttons, the chart type is set, `prepareForScreens
 The code above is from [`ViewController.m`](https://github.com/ShinobiControls/ChartWatch/blob/master/ChartWatch/ChartWatch/ViewController.m), and it will save a screenshot of the chart to the shared app group's file directory. It's worth noting that the user won't see a change in their app, as when the chart is set up, it's frame is set so that it will never be visible.
 
 ###Setting up the Watch App to show an image
+
+You now need an image view in your Watch App to display the chart image that has just been generated. Open up the Watch App directory in your XCode project and then select Interface.storyboard. Drag an Image from the Object Library onto the main screen in your storyboard. Set the properties of the image to match those in the image below.
+
+![Image Storyboard Setup](images/image_storyboard_setup.png "Setting up the image in the storyboard")
+
+Now create an IBOutlet to link that image view to the InterfaceController.m file created in the WatchKit Extension you created earlier.
+
+###Showing the image on the Watch
+
+All that is left is to show the image in the image view on the watch interface. To do this, it is necessary to read the file from the shared app group. However, it should also listen for changes to the file and update the watch interface if changes do occur. Otherwise the image would never change and only be read on startup. To solve this, make `InterfaceController.m` conform to the `NSFilePresenter` protocol. Then in the `initWithContext:` method, add the following line:
+
+	[NSFileCoordinator addFilePresenter:self];
+	
+There are two mandatory methods from `NSFilePresenter` that should be implemented. The first of these, `presentedItemURL`, tells the `NSFileCoordinator` which file `InterfaceController` is interested in. The second, `presntedItemOperationQueue` tells the `NSFileCoordinator` which queue `InterfaceController` wants notifications of changes to occur on. 
+
+	- (NSURL *)presentedItemURL {
+        return self.chartImageFileURL;
+    }
+
+    - (NSOperationQueue *)presentedItemOperationQueue {
+        return [NSOperationQueue mainQueue];
+    }
+
+    - (void)presentedItemDidChange {
+        [self updateImage];
+    }
+
+`presentedItemDidChange` should also be implemented, which will update what is displayed.
+
+Finally, the image should also be updated when the view becomes active
+
+
+	- (void)willActivate {
+    	[self updateImage];
+	}
+
+In order to update the image, the WatchKit Extension must read from the file. This is done in `updateImage`.
+
+	- (void)updateImage {
+        NSError *error;
+        if (![self.chartImageFileURL checkResourceIsReachableAndReturnError:&error]) {
+            NSLog(@"Chart image not available at %@. Error: %@", self.chartImageFileURL, error.debugDescription);
+            return;
+        }
+        
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.chartImageFileURL]];
+        [self.imageView setImage:image];
+    }
+
+And that's it! The screenshot of the chart should now be displayed on the Watch, and be automatically updated when the user taps one of the buttons on the iPhone screen.

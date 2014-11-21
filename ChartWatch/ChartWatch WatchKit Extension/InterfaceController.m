@@ -8,36 +8,53 @@
 
 #import "InterfaceController.h"
 
+@interface InterfaceController() <NSFilePresenter>
 
-@interface InterfaceController()
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *imageView;
+@property (strong, nonatomic) NSURL *chartImageFileURL;
 
 @end
-
 
 @implementation InterfaceController
 
 - (instancetype)initWithContext:(id)context {
     self = [super initWithContext:context];
-    if (self){
-        // Initialize variables here.
-        // Configure interface objects here.
-        NSLog(@"%@ initWithContext", self);
+    if (self) {
+        NSFileManager *defaultManager = [NSFileManager defaultManager];
+        NSURL *baseUrl = [defaultManager containerURLForSecurityApplicationGroupIdentifier:@"group.ShareAlike"];
+        self.chartImageFileURL = [baseUrl URLByAppendingPathComponent:@"chartImageData.png"
+                                                          isDirectory:NO];
         
+        [NSFileCoordinator addFilePresenter:self];
     }
     return self;
 }
 
-- (void)willActivate {
-    // This method is called when watch view controller is about to be visible to user
-    NSLog(@"%@ will activate", self);
+- (NSURL *)presentedItemURL {
+    return self.chartImageFileURL;
 }
 
-- (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
-    NSLog(@"%@ did deactivate", self);
+- (NSOperationQueue *)presentedItemOperationQueue {
+    return [NSOperationQueue mainQueue];
+}
+
+- (void)presentedItemDidChange {
+    [self updateImage];
+}
+
+- (void)willActivate {
+    [self updateImage];
+}
+
+- (void)updateImage {
+    NSError *error;
+    if (![self.chartImageFileURL checkResourceIsReachableAndReturnError:&error]) {
+        NSLog(@"Chart image not available at %@. Error: %@", self.chartImageFileURL, error.debugDescription);
+        return;
+    }
+    
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.chartImageFileURL]];
+    [self.imageView setImage:image];
 }
 
 @end
-
-
-

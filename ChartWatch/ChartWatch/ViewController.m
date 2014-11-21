@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, ChartType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.chart = [[ShinobiChart alloc] initWithFrame:CGRectMake(0, 300, 300, 300)];
+    self.chart = [[ShinobiChart alloc] initWithFrame:CGRectMake(-600, -600, 300, 300)];
     self.chart.datasource = self;
     
     SChartNumberAxis *xAxis = [SChartNumberAxis new];
