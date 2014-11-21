@@ -11,7 +11,7 @@
 #import <ShinobiCharts/ShinobiCharts.h>
 #import <ShinobiCharts/SChartCanvas.h>
 #import <ShinobiCharts/SChartGLView.h>
-//#import "SChartGLView+Screenshot.h"
+#import "SChartGLView+Screenshot.h"
 
 typedef NS_ENUM(NSUInteger, ChartType) {
     ChartTypeLine,
@@ -48,32 +48,68 @@ typedef NS_ENUM(NSUInteger, ChartType) {
 }
 
 - (IBAction)generateLineChartTapped:(UIButton *)sender {
-    if (self.chartType != ChartTypeLine) {
-        self.chartType = ChartTypeLine;
-        [self screenshot];
-    }
+    self.chartType = ChartTypeLine;
+    [self prepareForScreenshot];
+    [self performSelector:@selector(screenshot) withObject:nil afterDelay:0.1];
 }
 
 - (IBAction)generateColumnChartTapped:(UIButton *)sender {
-    if (self.chartType != ChartTypeColumn) {
-        self.chartType = ChartTypeColumn;
-        [self screenshot];
-    }
+    self.chartType = ChartTypeColumn;
+    [self prepareForScreenshot];
+    [self performSelector:@selector(screenshot) withObject:nil afterDelay:0.1];
 }
 
 - (IBAction)generateBarChartTapped:(UIButton *)sender {
-    if (self.chartType != ChartTypeBar) {
-        self.chartType = ChartTypeBar;
-        [self screenshot];
-    }
+    self.chartType = ChartTypeBar;
+    [self prepareForScreenshot];
+    [self performSelector:@selector(screenshot) withObject:nil afterDelay:0.1];
 }
 
-- (void)screenshot {
+/**
+ *  Prepare for a screenshot to be taken by reloading the data and redrawing the chart.
+ */
+- (void)prepareForScreenshot {
     [self.chart reloadData];
     [self.chart redrawChart];
 }
 
-- (id<SChartData>)sChart:(ShinobiChart *)chart dataPointAtIndex:(NSInteger)dataIndex forSeriesAtIndex:(NSInteger)seriesIndex {
+/**
+ *  Take a screenshot of the chart's GLView and save it to the shared application group directory.
+ */
+- (void)screenshot {
+    // Generate a UIImage from the chart's GLView.
+    // (See http://www.shinobicontrols.com/blog/posts/2012/03/26/taking-a-shinobichart-screenshot-from-your-app)
+    UIImage *chartImage = [self.chart.canvas.glView snapshot];
+    
+    // Find the baseURL for the shared app group, and then append chartImageData.png to it to give us the file path.
+    NSFileManager *defaultManager = [NSFileManager defaultManager];
+    NSURL *baseUrl = [defaultManager containerURLForSecurityApplicationGroupIdentifier:@"group.ShareAlike"];
+    NSURL *fileUrl = [baseUrl URLByAppendingPathComponent:@"chartImageData.png" isDirectory:NO];
+    
+    // Convert the image to PNG file data.
+    NSData *fileData = UIImagePNGRepresentation(chartImage);
+    
+    // Write the file, and display an alert if the file fails to write.
+    NSError *writeError;
+    if (![fileData writeToURL:fileUrl options:NSDataWritingAtomic error:&writeError]) {
+        // Writing to a file failed. Show why.
+        UIAlertController *alert;
+        alert = [UIAlertController alertControllerWithTitle:@"File write failed"
+                                                    message:writeError.debugDescription
+                                             preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:nil]];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+}
+
+- (id<SChartData>)sChart:(ShinobiChart *)chart
+        dataPointAtIndex:(NSInteger)dataIndex
+        forSeriesAtIndex:(NSInteger)seriesIndex
+{
     SChartDataPoint *dp = [SChartDataPoint new];
     dp.xValue = @(dataIndex);
     if (self.chartType == ChartTypeLine) {

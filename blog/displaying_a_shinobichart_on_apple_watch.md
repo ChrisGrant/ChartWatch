@@ -17,7 +17,7 @@ First things first, you'll need to add a Watch App target to your application fi
 
 ###Setting up a Shared App Group
 
-[The WatchKit programming guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html "WatchKit Programming Guide") states that 'If your iOS app and WatchKit extension rely on the same data, use a shared app group to store that data. An app group is an area in the local file system that both the extension and app can access.'
+[The WatchKit programming guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html "WatchKit Programming Guide") states that '*If your iOS app and WatchKit extension rely on the same data, use a shared app group to store that data. An app group is an area in the local file system that both the extension and app can access.*'
 
 To set this up, select your iPhone app target, then capabilities. Find 'App Groups' in the list, and switch this to 'ON'. Once this is done, select the default option with the checkbox. You'll need to do the exact same thing for your WatchKit Extension target too.
 
@@ -31,3 +31,49 @@ You can't take a snapshot of a ShinobiChart without adding that chart to the vie
 
 There's an [existing tutorial on how to take a screenshot of a ShinobiChart](http://www.shinobicontrols.com/blog/posts/2012/03/26/taking-a-shinobichart-screenshot-from-your-app) by Stuart already, so I won't cover that here. In the sample application, the chart screenshots are generated when a button is pressed in the `ViewController` class. These buttons are set up in the storyboard. 
 
+When a user taps one of these buttons, the chart type is set, `prepareForScreenshot` is called, which reloads and redraws the chart, then after a slight delay to let the chart render, `screenshot` is called.
+
+	/**
+     *  Prepare for a screenshot to be taken by reloading the data and redrawing the chart.
+     */
+    - (void)prepareForScreenshot {
+        [self.chart reloadData];
+        [self.chart redrawChart];
+    }
+
+    /**
+     *  Take a screenshot of the chart's GLView and save it to the shared application group directory.
+     */
+    - (void)screenshot {
+        // Generate a UIImage from the chart's GLView.
+        // (See http://www.shinobicontrols.com/blog/posts/2012/03/26/taking-a-shinobichart-screenshot-from-your-app)
+        UIImage *chartImage = [self.chart.canvas.glView snapshot];
+        
+        // Find the baseURL for the shared app group, and then append chartImageData.png to it to give us the file path.
+        NSFileManager *defaultManager = [NSFileManager defaultManager];
+        NSURL *baseUrl = [defaultManager containerURLForSecurityApplicationGroupIdentifier:@"group.ShareAlike"];
+        NSURL *fileUrl = [baseUrl URLByAppendingPathComponent:@"chartImageData.png" isDirectory:NO];
+        
+        // Convert the image to PNG file data.
+        NSData *fileData = UIImagePNGRepresentation(chartImage);
+        
+        // Write the file, and display an alert if the file fails to write.
+        NSError *writeError;
+        if (![fileData writeToURL:fileUrl options:NSDataWritingAtomic error:&writeError]) {
+            // Writing to a file failed. Show why.
+            UIAlertController *alert;
+            alert = [UIAlertController alertControllerWithTitle:@"File write failed"
+                                                        message:writeError.debugDescription
+                                                 preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                      style:UIAlertActionStyleDefault
+                                                    handler:nil]];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }
+
+The code above is from [`ViewController.m`](https://github.com/ShinobiControls/ChartWatch/blob/master/ChartWatch/ChartWatch/ViewController.m), and it will save a screenshot of the chart to the shared app group's file directory. It's worth noting that the user won't see a change in their app, as when the chart is set up, it's frame is set so that it will never be visible.
+
+###Setting up the Watch App to show an image
