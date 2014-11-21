@@ -13,7 +13,45 @@
 		705F169D1A1F3E72001BD29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705F169B1A1F3E72001BD29D /* Main.storyboard */; };
 		705F169F1A1F3E72001BD29D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705F169E1A1F3E72001BD29D /* Images.xcassets */; };
 		705F16A21A1F3E72001BD29D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705F16A01A1F3E72001BD29D /* LaunchScreen.xib */; };
+		705F16BE1A1F4015001BD29D /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16BD1A1F4015001BD29D /* WatchKit.framework */; };
+		705F16C41A1F4015001BD29D /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 705F16C31A1F4015001BD29D /* InterfaceController.m */; };
+		705F16C61A1F4015001BD29D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705F16C51A1F4015001BD29D /* Images.xcassets */; };
+		705F16CA1A1F4015001BD29D /* ChartWatch Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 705F16C91A1F4015001BD29D /* ChartWatch Watch App.app */; };
+		705F16D11A1F4015001BD29D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705F16D01A1F4015001BD29D /* Interface.storyboard */; };
+		705F16D31A1F4016001BD29D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705F16D21A1F4016001BD29D /* Images.xcassets */; };
+		705F16D61A1F4016001BD29D /* ChartWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 705F16BB1A1F4015001BD29D /* ChartWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		705F16CB1A1F4015001BD29D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 705F16861A1F3E72001BD29D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 705F16C81A1F4015001BD29D;
+			remoteInfo = "ChartWatch Watch App";
+		};
+		705F16D41A1F4016001BD29D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 705F16861A1F3E72001BD29D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 705F16BA1A1F4015001BD29D;
+			remoteInfo = "ChartWatch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		705F16DD1A1F4016001BD29D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				705F16D61A1F4016001BD29D /* ChartWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		705F168E1A1F3E72001BD29D /* ChartWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +64,16 @@
 		705F169C1A1F3E72001BD29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		705F169E1A1F3E72001BD29D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		705F16A11A1F3E72001BD29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		705F16BB1A1F4015001BD29D /* ChartWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ChartWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		705F16BD1A1F4015001BD29D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		705F16C11A1F4015001BD29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		705F16C21A1F4015001BD29D /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		705F16C31A1F4015001BD29D /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		705F16C51A1F4015001BD29D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		705F16C91A1F4015001BD29D /* ChartWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChartWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		705F16CF1A1F4015001BD29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		705F16D01A1F4015001BD29D /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		705F16D21A1F4016001BD29D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +84,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		705F16B81A1F4015001BD29D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F16BE1A1F4015001BD29D /* WatchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -43,6 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				705F16901A1F3E72001BD29D /* ChartWatch */,
+				705F16BF1A1F4015001BD29D /* ChartWatch WatchKit Extension */,
+				705F16CD1A1F4015001BD29D /* ChartWatch Watch App */,
+				705F16BC1A1F4015001BD29D /* Frameworks */,
 				705F168F1A1F3E72001BD29D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				705F168E1A1F3E72001BD29D /* ChartWatch.app */,
+				705F16BB1A1F4015001BD29D /* ChartWatch WatchKit Extension.appex */,
+				705F16C91A1F4015001BD29D /* ChartWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +140,51 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		705F16BC1A1F4015001BD29D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				705F16BD1A1F4015001BD29D /* WatchKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		705F16BF1A1F4015001BD29D /* ChartWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				705F16C21A1F4015001BD29D /* InterfaceController.h */,
+				705F16C31A1F4015001BD29D /* InterfaceController.m */,
+				705F16C51A1F4015001BD29D /* Images.xcassets */,
+				705F16C01A1F4015001BD29D /* Supporting Files */,
+			);
+			path = "ChartWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		705F16C01A1F4015001BD29D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				705F16C11A1F4015001BD29D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		705F16CD1A1F4015001BD29D /* ChartWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				705F16D01A1F4015001BD29D /* Interface.storyboard */,
+				705F16D21A1F4016001BD29D /* Images.xcassets */,
+				705F16CE1A1F4015001BD29D /* Supporting Files */,
+			);
+			path = "ChartWatch Watch App";
+			sourceTree = "<group>";
+		};
+		705F16CE1A1F4015001BD29D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				705F16CF1A1F4015001BD29D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,15 +195,50 @@
 				705F168A1A1F3E72001BD29D /* Sources */,
 				705F168B1A1F3E72001BD29D /* Frameworks */,
 				705F168C1A1F3E72001BD29D /* Resources */,
+				705F16DD1A1F4016001BD29D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				705F16D51A1F4016001BD29D /* PBXTargetDependency */,
 			);
 			name = ChartWatch;
 			productName = ChartWatch;
 			productReference = 705F168E1A1F3E72001BD29D /* ChartWatch.app */;
 			productType = "com.apple.product-type.application";
+		};
+		705F16BA1A1F4015001BD29D /* ChartWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705F16DA1A1F4016001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch WatchKit Extension" */;
+			buildPhases = (
+				705F16B71A1F4015001BD29D /* Sources */,
+				705F16B81A1F4015001BD29D /* Frameworks */,
+				705F16B91A1F4015001BD29D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				705F16CC1A1F4015001BD29D /* PBXTargetDependency */,
+			);
+			name = "ChartWatch WatchKit Extension";
+			productName = "ChartWatch WatchKit Extension";
+			productReference = 705F16BB1A1F4015001BD29D /* ChartWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		705F16C81A1F4015001BD29D /* ChartWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705F16D71A1F4016001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch Watch App" */;
+			buildPhases = (
+				705F16C71A1F4015001BD29D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ChartWatch Watch App";
+			productName = "ChartWatch Watch App";
+			productReference = 705F16C91A1F4015001BD29D /* ChartWatch Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,6 +250,12 @@
 				ORGANIZATIONNAME = "Scott Logic Ltd.";
 				TargetAttributes = {
 					705F168D1A1F3E72001BD29D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					705F16BA1A1F4015001BD29D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					705F16C81A1F4015001BD29D = {
 						CreatedOnToolsVersion = 6.2;
 					};
 				};
@@ -127,6 +274,8 @@
 			projectRoot = "";
 			targets = (
 				705F168D1A1F3E72001BD29D /* ChartWatch */,
+				705F16BA1A1F4015001BD29D /* ChartWatch WatchKit Extension */,
+				705F16C81A1F4015001BD29D /* ChartWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +288,24 @@
 				705F169D1A1F3E72001BD29D /* Main.storyboard in Resources */,
 				705F16A21A1F3E72001BD29D /* LaunchScreen.xib in Resources */,
 				705F169F1A1F3E72001BD29D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705F16B91A1F4015001BD29D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F16CA1A1F4015001BD29D /* ChartWatch Watch App.app in Resources */,
+				705F16C61A1F4015001BD29D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705F16C71A1F4015001BD29D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F16D11A1F4015001BD29D /* Interface.storyboard in Resources */,
+				705F16D31A1F4016001BD29D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +322,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		705F16B71A1F4015001BD29D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F16C41A1F4015001BD29D /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		705F16CC1A1F4015001BD29D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 705F16C81A1F4015001BD29D /* ChartWatch Watch App */;
+			targetProxy = 705F16CB1A1F4015001BD29D /* PBXContainerItemProxy */;
+		};
+		705F16D51A1F4016001BD29D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 705F16BA1A1F4015001BD29D /* ChartWatch WatchKit Extension */;
+			targetProxy = 705F16D41A1F4016001BD29D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		705F169B1A1F3E72001BD29D /* Main.storyboard */ = {
@@ -273,6 +461,62 @@
 			};
 			name = Release;
 		};
+		705F16D81A1F4016001BD29D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = ChartWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "ChartWatch Watch App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		705F16D91A1F4016001BD29D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = ChartWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "ChartWatch Watch App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		705F16DB1A1F4016001BD29D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ChartWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		705F16DC1A1F4016001BD29D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ChartWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -290,6 +534,22 @@
 			buildConfigurations = (
 				705F16B21A1F3E72001BD29D /* Debug */,
 				705F16B31A1F3E72001BD29D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		705F16D71A1F4016001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705F16D81A1F4016001BD29D /* Debug */,
+				705F16D91A1F4016001BD29D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		705F16DA1A1F4016001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705F16DB1A1F4016001BD29D /* Debug */,
+				705F16DC1A1F4016001BD29D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
