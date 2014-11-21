@@ -1,5 +1,7 @@
 #Displaying a ShinobiChart on WATCH
 
+![Displaying a ShinobiChart on an AppleWatch](images/watchdemo.gif "Displaying a Shinobi Chart on an Apple Watch")
+
 
 
 ##How To
