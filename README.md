@@ -3,7 +3,7 @@ ChartWatch
 
 A simple demonstration of how to display images of charts on Apple Watch
 
-![Screenshot](blog/assets/watchdemo.gif)
+![Screenshot](screenshot.png)
 
 Building the project
 ------------------
@@ -14,7 +14,7 @@ If you've used the installer to install ShinobiCharts, the project should just w
 
 If you're using the trial version you'll need to add your license key. To do so, open up ViewController.m and add the following line after the chart is initialised:
 
-    chart.licenseKey=@"your license key";
+    chart.licenseKey = @"your license key";
 
 Contributing
 ------------
