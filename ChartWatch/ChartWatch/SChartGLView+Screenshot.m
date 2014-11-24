@@ -1,8 +1,7 @@
 //
 //  SChartGLView+Screenshot.m
-//  OneTrader
+//  ChartWatch
 //
-//  Created by Chris Grant on 09/10/2014.
 //  Copyright (c) 2014 Scott Logic. All rights reserved.
 //
 
@@ -10,9 +9,7 @@
 
 @implementation SChartGLView (Screenshot)
 
-- (UIImage*)snapshot
-{
-    
+- (UIImage*)snapshot {
     [EAGLContext setCurrentContext:[self getContext]];
     
     GLint backingWidth, backingHeight;
@@ -51,12 +48,6 @@
         widthInPoints = width / scale;
         heightInPoints = height / scale;
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(widthInPoints, heightInPoints), NO, scale);
-    }
-    else {
-        // On iOS prior to 4, fall back to use UIGraphicsBeginImageContext
-        widthInPoints = width;
-        heightInPoints = height;
-        UIGraphicsBeginImageContext(CGSizeMake(widthInPoints, heightInPoints));
     }
     
     CGContextRef cgcontext = UIGraphicsGetCurrentContext();

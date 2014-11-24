@@ -1,8 +1,7 @@
 //
 //  SChartGLView+Screenshot.h
-//  OneTrader
+//  ChartWatch
 //
-//  Created by Chris Grant on 09/10/2014.
 //  Copyright (c) 2014 Scott Logic. All rights reserved.
 //
 
