@@ -1,6 +1,6 @@
 #Displaying a ShinobiChart on WATCH
 
-![Displaying a ShinobiChart on an AppleWatch](images/watchdemo.gif "Displaying a Shinobi Chart on an Apple Watch")
+![Displaying a ShinobiChart on an AppleWatch](assets/watchdemo.gif "Displaying a Shinobi Chart on an Apple Watch")
 
 Apple recently released [WatchKit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html), the eagarly awaited SDK for the new WATCH, meaning developers can now start to work on their own Watch Apps. This blog post explores how to display ShinobiCharts inside of your WatchKit apps.
 
@@ -20,7 +20,7 @@ In order to follow along, you can [download the sample code from this project fr
 
 First things first, you'll need to add a Watch App target to your application first. Select 'Add Target' in XCode, and select Apple Watch -> Watch App. The default settings will do for now, so select finish.
 
-![Watch App Target Setup](images/add_watch_target.png "Adding a Watch App Target")
+![Watch App Target Setup](assets/add_watch_target.png "Adding a Watch App Target")
 
 
 ###Setting up a Shared App Group
@@ -29,7 +29,7 @@ First things first, you'll need to add a Watch App target to your application fi
 
 To set this up, select your iPhone app target, then capabilities. Find 'App Groups' in the list, and switch this to 'ON'. Once this is done, select the default option with the checkbox. You'll need to do the exact same thing for your WatchKit Extension target too.
 
-![App Group Setup](images/app_group_setup.png "Adding a Watch App Target")
+![App Group Setup](assets/app_group_setup.png "Adding a Watch App Target")
 
 This should have created a couple of entitlements files, one in each target. Verify this and your iPhone app should now be ready to share data with your WatchKit Extension.
 
@@ -39,7 +39,7 @@ You can't take a snapshot of a ShinobiChart without adding that chart to the vie
 
 There's an [existing tutorial on how to take a screenshot of a ShinobiChart](http://www.shinobicontrols.com/blog/posts/2012/03/26/taking-a-shinobichart-screenshot-from-your-app) by Stuart already, so I won't cover that here. In the sample application, the chart screenshots are generated when a button is pressed in the `ViewController` class. These buttons are set up in the storyboard. 
 
-![iPhone App UI](images/iPhone_app_ui.png "iPhone App UI")
+![iPhone App UI](assets/iPhone_app_ui.png "iPhone App UI")
 
 When a user taps one of these buttons, the chart type is set, `prepareForScreenshot` is called, which reloads and redraws the chart, then after a slight delay to let the chart render, `screenshot` is called.
 
@@ -90,7 +90,7 @@ The code above is from [`ViewController.m`](https://github.com/ShinobiControls/C
 
 You now need an image view in your Watch App to display the chart image that has just been generated. Open up the Watch App directory in your XCode project and then select Interface.storyboard. Drag an Image from the Object Library onto the main screen in your storyboard. Set the properties of the image to match those in the image below.
 
-![Image Storyboard Setup](images/image_storyboard_setup.png "Setting up the image in the storyboard")
+![Image Storyboard Setup](assets/image_storyboard_setup.png "Setting up the image in the storyboard")
 
 Now create an IBOutlet to link that image view to the InterfaceController.m file created in the WatchKit Extension you created earlier.
 
