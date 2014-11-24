@@ -2,11 +2,11 @@
 
 ![Displaying a ShinobiChart on an AppleWatch](assets/watchdemo.gif "Displaying a Shinobi Chart on an Apple Watch")
 
-Apple recently released [WatchKit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html), the eagarly awaited SDK for the new WATCH, meaning developers can now start to work on their own Watch Apps. This blog post explores how to display ShinobiCharts inside of your WatchKit apps.
+Apple recently released [WatchKit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html), the eagerly awaited SDK for the new WATCH, meaning developers can now start to work on their own Watch Apps. This blog post explores how to display ShinobiCharts inside of your WatchKit apps.
 
 Unfortunately, the WatchKit SDK seems to be quite heavily restricted at the moment. You can only define and layout views in Storyboards created with interface builder, and there's very little option for modifying these views. You can't add custom views to Watch Apps, which presents quite a challenge for app developers who wish to build engaging, informative apps.
 
-Therfore, for now at least, we are restricted in how we can display a chart in a Watch App. The only option currently seems to render a chart as an image, then display that image on the Watch App. Even this has it's challenges. As you need to add a view to the view hierarchy to take a screenshot of it, you can't generate these screenshots on the watch. You have to generate them inside an iPhone app and transfer them. Further complicating matters is the fact that there's no direct communication between iPhone apps and Watch apps. You have to set up a shared app group and save files to that app group to share data.
+Therefore, for now at least, we are restricted in how we can display a chart in a Watch App. The only option currently seems to render a chart as an image, then display that image on the Watch App. Even this has it's challenges. As you need to add a view to the view hierarchy to take a screenshot of it, you can't generate these screenshots on the watch. You have to generate them inside an iPhone app and transfer them. Further complicating matters is the fact that there's no direct communication between iPhone apps and Watch apps. You have to set up a shared app group and save files to that app group to share data.
 
 There is a way to do this though, and I've outlined the approach that we have settled on (for now) below. We will be continuing to *watch* developments with WatchKit closely, and have already started working on an API to make this easier for users of our Charts Framework.
 
