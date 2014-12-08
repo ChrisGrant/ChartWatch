@@ -610,6 +610,7 @@
 				705F16B31A1F3E72001BD29D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		705F16D71A1F4016001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch Watch App" */ = {
 			isa = XCConfigurationList;
@@ -618,6 +619,7 @@
 				705F16D91A1F4016001BD29D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		705F16DA1A1F4016001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -626,6 +628,7 @@
 				705F16DC1A1F4016001BD29D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

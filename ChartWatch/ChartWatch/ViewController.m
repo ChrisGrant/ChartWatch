@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, ChartType) {
     ChartTypeBar,
 };
 
-@interface ViewController () <SChartDatasource>
+@interface ViewController () <SChartDatasource, SChartDelegate>
 
 @property (nonatomic, strong) ShinobiChart *chart;
 @property (nonatomic, assign) ChartType chartType;
@@ -32,6 +32,7 @@ typedef NS_ENUM(NSUInteger, ChartType) {
     
     self.chart = [[ShinobiChart alloc] initWithFrame:CGRectMake(-600, -600, 300, 300)];
     self.chart.datasource = self;
+    self.chart.delegate = self;
     
     SChartNumberAxis *xAxis = [SChartNumberAxis new];
     xAxis.title = @"X Value";
@@ -49,19 +50,16 @@ typedef NS_ENUM(NSUInteger, ChartType) {
 - (IBAction)generateLineChartTapped:(UIButton *)sender {
     self.chartType = ChartTypeLine;
     [self prepareForScreenshot];
-    [self performSelector:@selector(screenshot) withObject:nil afterDelay:0.1];
 }
 
 - (IBAction)generateColumnChartTapped:(UIButton *)sender {
     self.chartType = ChartTypeColumn;
     [self prepareForScreenshot];
-    [self performSelector:@selector(screenshot) withObject:nil afterDelay:0.1];
 }
 
 - (IBAction)generateBarChartTapped:(UIButton *)sender {
     self.chartType = ChartTypeBar;
     [self prepareForScreenshot];
-    [self performSelector:@selector(screenshot) withObject:nil afterDelay:0.1];
 }
 
 /**
@@ -70,6 +68,10 @@ typedef NS_ENUM(NSUInteger, ChartType) {
 - (void)prepareForScreenshot {
     [self.chart reloadData];
     [self.chart redrawChart];
+}
+
+- (void)sChartRenderFinished:(ShinobiChart *)chart {
+    [self screenshot];
 }
 
 /**
