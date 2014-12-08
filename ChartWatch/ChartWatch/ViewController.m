@@ -7,10 +7,6 @@
 
 #import "ViewController.h"
 #import <ShinobiCharts/ShinobiCharts.h>
-#import <ShinobiCharts/ShinobiCharts.h>
-#import <ShinobiCharts/SChartCanvas.h>
-#import <ShinobiCharts/SChartGLView.h>
-#import "SChartGLView+Screenshot.h"
 
 typedef NS_ENUM(NSUInteger, ChartType) {
     ChartTypeLine,
@@ -35,13 +31,17 @@ typedef NS_ENUM(NSUInteger, ChartType) {
     self.chart.delegate = self;
     
     SChartNumberAxis *xAxis = [SChartNumberAxis new];
-    xAxis.title = @"X Value";
+    xAxis.style.majorTickStyle.showLabels = NO;
+    xAxis.style.majorTickStyle.showTicks = NO;
+    xAxis.style.lineWidth = @0;
     self.chart.xAxis = xAxis;
     
     SChartNumberAxis *yAxis = [SChartNumberAxis new];
-    yAxis.title = @"Y Value";
     yAxis.rangePaddingLow = @(0.1);
     yAxis.rangePaddingHigh = @(0.1);
+    yAxis.style.majorTickStyle.showLabels = NO;
+    yAxis.style.majorTickStyle.showTicks = NO;
+    yAxis.style.lineWidth = @0;
     self.chart.yAxis = yAxis;
     
     [self.view addSubview:self.chart];
@@ -75,12 +75,15 @@ typedef NS_ENUM(NSUInteger, ChartType) {
 }
 
 /**
- *  Take a screenshot of the chart's GLView and save it to the shared application group directory.
+ *  Take a screenshot of the chart and save it to the shared application group directory.
  */
 - (void)screenshot {
-    // Generate a UIImage from the chart's GLView.
-    // (See http://www.shinobicontrols.com/blog/posts/2012/03/26/taking-a-shinobichart-screenshot-from-your-app)
-    UIImage *chartImage = [self.chart.canvas.glView snapshot];
+    // Generate a UIImage from the chart.
+    // (See http://www.shinobicontrols.com/blog/posts/2014/02/24/taking-a-chart-snapshot-in-ios7 )
+    UIGraphicsBeginImageContextWithOptions(self.chart.bounds.size, YES, 0.0);
+    [self.chart drawViewHierarchyInRect:self.chart.bounds afterScreenUpdates:YES];
+    UIImage *chartImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
     // Find the baseURL for the shared app group, and then append chartImageData.png to it to give us the file path.
     NSFileManager *defaultManager = [NSFileManager defaultManager];
