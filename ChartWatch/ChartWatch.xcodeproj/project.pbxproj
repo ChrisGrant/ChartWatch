@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		705F16941A1F3E72001BD29D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 705F16931A1F3E72001BD29D /* main.m */; };
+		705F16971A1F3E72001BD29D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 705F16961A1F3E72001BD29D /* AppDelegate.m */; };
+		705F169A1A1F3E72001BD29D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 705F16991A1F3E72001BD29D /* ViewController.m */; };
+		705F169D1A1F3E72001BD29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705F169B1A1F3E72001BD29D /* Main.storyboard */; };
+		705F169F1A1F3E72001BD29D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705F169E1A1F3E72001BD29D /* Images.xcassets */; };
+		705F16A21A1F3E72001BD29D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705F16A01A1F3E72001BD29D /* LaunchScreen.xib */; };
+		705F16BE1A1F4015001BD29D /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16BD1A1F4015001BD29D /* WatchKit.framework */; };
+		705F16C41A1F4015001BD29D /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 705F16C31A1F4015001BD29D /* InterfaceController.m */; };
+		705F16C61A1F4015001BD29D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705F16C51A1F4015001BD29D /* Images.xcassets */; };
+		705F16CA1A1F4015001BD29D /* ChartWatch Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 705F16C91A1F4015001BD29D /* ChartWatch Watch App.app */; };
+		705F16D11A1F4015001BD29D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705F16D01A1F4015001BD29D /* Interface.storyboard */; };
+		705F16D31A1F4016001BD29D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705F16D21A1F4016001BD29D /* Images.xcassets */; };
+		705F16D61A1F4016001BD29D /* ChartWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 705F16BB1A1F4015001BD29D /* ChartWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		705F16E51A1F4581001BD29D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16E01A1F4580001BD29D /* libc++.dylib */; };
+		705F16E61A1F4581001BD29D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16E11A1F4581001BD29D /* QuartzCore.framework */; };
+		705F16E71A1F4581001BD29D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16E21A1F4581001BD29D /* OpenGLES.framework */; };
+		705F16E81A1F4581001BD29D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16E31A1F4581001BD29D /* CoreText.framework */; };
+		705F16ED1A1F4B74001BD29D /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16EC1A1F4B74001BD29D /* ShinobiCharts.framework */; };
+		705F16F01A1F54C6001BD29D /* SChartGLView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 705F16EF1A1F54C6001BD29D /* SChartGLView+Screenshot.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		705F16CB1A1F4015001BD29D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 705F16861A1F3E72001BD29D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 705F16C81A1F4015001BD29D;
+			remoteInfo = "ChartWatch Watch App";
+		};
+		705F16D41A1F4016001BD29D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 705F16861A1F3E72001BD29D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 705F16BA1A1F4015001BD29D;
+			remoteInfo = "ChartWatch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		705F16DD1A1F4016001BD29D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				705F16D61A1F4016001BD29D /* ChartWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		705F168E1A1F3E72001BD29D /* ChartWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		705F16921A1F3E72001BD29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		705F16931A1F3E72001BD29D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		705F16951A1F3E72001BD29D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		705F16961A1F3E72001BD29D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		705F16981A1F3E72001BD29D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		705F16991A1F3E72001BD29D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		705F169C1A1F3E72001BD29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		705F169E1A1F3E72001BD29D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		705F16A11A1F3E72001BD29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		705F16BB1A1F4015001BD29D /* ChartWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ChartWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		705F16BD1A1F4015001BD29D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		705F16C11A1F4015001BD29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		705F16C21A1F4015001BD29D /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		705F16C31A1F4015001BD29D /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		705F16C51A1F4015001BD29D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		705F16C91A1F4015001BD29D /* ChartWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChartWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		705F16CF1A1F4015001BD29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		705F16D01A1F4015001BD29D /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		705F16D21A1F4016001BD29D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		705F16DE1A1F4198001BD29D /* ChartWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ChartWatch.entitlements; sourceTree = "<group>"; };
+		705F16DF1A1F4210001BD29D /* ChartWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ChartWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		705F16E01A1F4580001BD29D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		705F16E11A1F4581001BD29D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		705F16E21A1F4581001BD29D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		705F16E31A1F4581001BD29D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		705F16EC1A1F4B74001BD29D /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = ../../ShinobiCharts.framework; sourceTree = "<group>"; };
+		705F16EE1A1F54C6001BD29D /* SChartGLView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SChartGLView+Screenshot.h"; sourceTree = "<group>"; };
+		705F16EF1A1F54C6001BD29D /* SChartGLView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SChartGLView+Screenshot.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		705F168B1A1F3E72001BD29D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F16E81A1F4581001BD29D /* CoreText.framework in Frameworks */,
+				705F16ED1A1F4B74001BD29D /* ShinobiCharts.framework in Frameworks */,
+				705F16E61A1F4581001BD29D /* QuartzCore.framework in Frameworks */,
+				705F16E51A1F4581001BD29D /* libc++.dylib in Frameworks */,
+				705F16E71A1F4581001BD29D /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705F16B81A1F4015001BD29D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F16BE1A1F4015001BD29D /* WatchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		705F16851A1F3E72001BD29D = {
+			isa = PBXGroup;
+			children = (
+				705F16901A1F3E72001BD29D /* ChartWatch */,
+				705F16BF1A1F4015001BD29D /* ChartWatch WatchKit Extension */,
+				705F16CD1A1F4015001BD29D /* ChartWatch Watch App */,
+				705F16BC1A1F4015001BD29D /* Frameworks */,
+				705F168F1A1F3E72001BD29D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		705F168F1A1F3E72001BD29D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				705F168E1A1F3E72001BD29D /* ChartWatch.app */,
+				705F16BB1A1F4015001BD29D /* ChartWatch WatchKit Extension.appex */,
+				705F16C91A1F4015001BD29D /* ChartWatch Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		705F16901A1F3E72001BD29D /* ChartWatch */ = {
+			isa = PBXGroup;
+			children = (
+				705F16951A1F3E72001BD29D /* AppDelegate.h */,
+				705F16961A1F3E72001BD29D /* AppDelegate.m */,
+				705F16DE1A1F4198001BD29D /* ChartWatch.entitlements */,
+				705F169E1A1F3E72001BD29D /* Images.xcassets */,
+				705F16A01A1F3E72001BD29D /* LaunchScreen.xib */,
+				705F169B1A1F3E72001BD29D /* Main.storyboard */,
+				705F16EE1A1F54C6001BD29D /* SChartGLView+Screenshot.h */,
+				705F16EF1A1F54C6001BD29D /* SChartGLView+Screenshot.m */,
+				705F16981A1F3E72001BD29D /* ViewController.h */,
+				705F16991A1F3E72001BD29D /* ViewController.m */,
+				705F16EA1A1F4594001BD29D /* Frameworks */,
+				705F16911A1F3E72001BD29D /* Supporting Files */,
+			);
+			path = ChartWatch;
+			sourceTree = "<group>";
+		};
+		705F16911A1F3E72001BD29D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				705F16921A1F3E72001BD29D /* Info.plist */,
+				705F16931A1F3E72001BD29D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		705F16BC1A1F4015001BD29D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				705F16BD1A1F4015001BD29D /* WatchKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		705F16BF1A1F4015001BD29D /* ChartWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				705F16DF1A1F4210001BD29D /* ChartWatch WatchKit Extension.entitlements */,
+				705F16C21A1F4015001BD29D /* InterfaceController.h */,
+				705F16C31A1F4015001BD29D /* InterfaceController.m */,
+				705F16C51A1F4015001BD29D /* Images.xcassets */,
+				705F16C01A1F4015001BD29D /* Supporting Files */,
+			);
+			path = "ChartWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		705F16C01A1F4015001BD29D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				705F16C11A1F4015001BD29D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		705F16CD1A1F4015001BD29D /* ChartWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				705F16D01A1F4015001BD29D /* Interface.storyboard */,
+				705F16D21A1F4016001BD29D /* Images.xcassets */,
+				705F16CE1A1F4015001BD29D /* Supporting Files */,
+			);
+			path = "ChartWatch Watch App";
+			sourceTree = "<group>";
+		};
+		705F16CE1A1F4015001BD29D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				705F16CF1A1F4015001BD29D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		705F16EA1A1F4594001BD29D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				705F16EC1A1F4B74001BD29D /* ShinobiCharts.framework */,
+				705F16E31A1F4581001BD29D /* CoreText.framework */,
+				705F16E01A1F4580001BD29D /* libc++.dylib */,
+				705F16E21A1F4581001BD29D /* OpenGLES.framework */,
+				705F16E11A1F4581001BD29D /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		705F168D1A1F3E72001BD29D /* ChartWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705F16B11A1F3E72001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch" */;
+			buildPhases = (
+				705F168A1A1F3E72001BD29D /* Sources */,
+				705F168B1A1F3E72001BD29D /* Frameworks */,
+				705F168C1A1F3E72001BD29D /* Resources */,
+				705F16DD1A1F4016001BD29D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				705F16D51A1F4016001BD29D /* PBXTargetDependency */,
+			);
+			name = ChartWatch;
+			productName = ChartWatch;
+			productReference = 705F168E1A1F3E72001BD29D /* ChartWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		705F16BA1A1F4015001BD29D /* ChartWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705F16DA1A1F4016001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch WatchKit Extension" */;
+			buildPhases = (
+				705F16B71A1F4015001BD29D /* Sources */,
+				705F16B81A1F4015001BD29D /* Frameworks */,
+				705F16B91A1F4015001BD29D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				705F16CC1A1F4015001BD29D /* PBXTargetDependency */,
+			);
+			name = "ChartWatch WatchKit Extension";
+			productName = "ChartWatch WatchKit Extension";
+			productReference = 705F16BB1A1F4015001BD29D /* ChartWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		705F16C81A1F4015001BD29D /* ChartWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705F16D71A1F4016001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch Watch App" */;
+			buildPhases = (
+				705F16C71A1F4015001BD29D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ChartWatch Watch App";
+			productName = "ChartWatch Watch App";
+			productReference = 705F16C91A1F4015001BD29D /* ChartWatch Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		705F16861A1F3E72001BD29D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Scott Logic Ltd.";
+				TargetAttributes = {
+					705F168D1A1F3E72001BD29D = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = XJ74287KY8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					705F16BA1A1F4015001BD29D = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = XJ74287KY8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					705F16C81A1F4015001BD29D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 705F16891A1F3E72001BD29D /* Build configuration list for PBXProject "ChartWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 705F16851A1F3E72001BD29D;
+			productRefGroup = 705F168F1A1F3E72001BD29D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				705F168D1A1F3E72001BD29D /* ChartWatch */,
+				705F16BA1A1F4015001BD29D /* ChartWatch WatchKit Extension */,
+				705F16C81A1F4015001BD29D /* ChartWatch Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		705F168C1A1F3E72001BD29D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F169D1A1F3E72001BD29D /* Main.storyboard in Resources */,
+				705F16A21A1F3E72001BD29D /* LaunchScreen.xib in Resources */,
+				705F169F1A1F3E72001BD29D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705F16B91A1F4015001BD29D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F16CA1A1F4015001BD29D /* ChartWatch Watch App.app in Resources */,
+				705F16C61A1F4015001BD29D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705F16C71A1F4015001BD29D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F16D11A1F4015001BD29D /* Interface.storyboard in Resources */,
+				705F16D31A1F4016001BD29D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		705F168A1A1F3E72001BD29D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F16F01A1F54C6001BD29D /* SChartGLView+Screenshot.m in Sources */,
+				705F169A1A1F3E72001BD29D /* ViewController.m in Sources */,
+				705F16971A1F3E72001BD29D /* AppDelegate.m in Sources */,
+				705F16941A1F3E72001BD29D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705F16B71A1F4015001BD29D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705F16C41A1F4015001BD29D /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		705F16CC1A1F4015001BD29D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 705F16C81A1F4015001BD29D /* ChartWatch Watch App */;
+			targetProxy = 705F16CB1A1F4015001BD29D /* PBXContainerItemProxy */;
+		};
+		705F16D51A1F4016001BD29D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 705F16BA1A1F4015001BD29D /* ChartWatch WatchKit Extension */;
+			targetProxy = 705F16D41A1F4016001BD29D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		705F169B1A1F3E72001BD29D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				705F169C1A1F3E72001BD29D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		705F16A01A1F3E72001BD29D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				705F16A11A1F3E72001BD29D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		705F16AF1A1F3E72001BD29D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		705F16B01A1F3E72001BD29D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		705F16B21A1F3E72001BD29D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChartWatch/ChartWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+				);
+				INFOPLIST_FILE = ChartWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		705F16B31A1F3E72001BD29D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChartWatch/ChartWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+				);
+				INFOPLIST_FILE = ChartWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		705F16D81A1F4016001BD29D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = ChartWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "ChartWatch Watch App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		705F16D91A1F4016001BD29D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = ChartWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "ChartWatch Watch App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		705F16DB1A1F4016001BD29D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ChartWatch WatchKit Extension/ChartWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ChartWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		705F16DC1A1F4016001BD29D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ChartWatch WatchKit Extension/ChartWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "ChartWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		705F16891A1F3E72001BD29D /* Build configuration list for PBXProject "ChartWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705F16AF1A1F3E72001BD29D /* Debug */,
+				705F16B01A1F3E72001BD29D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		705F16B11A1F3E72001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705F16B21A1F3E72001BD29D /* Debug */,
+				705F16B31A1F3E72001BD29D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		705F16D71A1F4016001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705F16D81A1F4016001BD29D /* Debug */,
+				705F16D91A1F4016001BD29D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		705F16DA1A1F4016001BD29D /* Build configuration list for PBXNativeTarget "ChartWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705F16DB1A1F4016001BD29D /* Debug */,
+				705F16DC1A1F4016001BD29D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 705F16861A1F3E72001BD29D /* Project object */;
+}
