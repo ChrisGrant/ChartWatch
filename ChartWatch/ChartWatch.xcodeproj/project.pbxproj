@@ -25,7 +25,6 @@
 		705F16E71A1F4581001BD29D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16E21A1F4581001BD29D /* OpenGLES.framework */; };
 		705F16E81A1F4581001BD29D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16E31A1F4581001BD29D /* CoreText.framework */; };
 		705F16ED1A1F4B74001BD29D /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705F16EC1A1F4B74001BD29D /* ShinobiCharts.framework */; };
-		705F16F01A1F54C6001BD29D /* SChartGLView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 705F16EF1A1F54C6001BD29D /* SChartGLView+Screenshot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +86,6 @@
 		705F16E21A1F4581001BD29D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		705F16E31A1F4581001BD29D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		705F16EC1A1F4B74001BD29D /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = ../../ShinobiCharts.framework; sourceTree = "<group>"; };
-		705F16EE1A1F54C6001BD29D /* SChartGLView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SChartGLView+Screenshot.h"; sourceTree = "<group>"; };
-		705F16EF1A1F54C6001BD29D /* SChartGLView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SChartGLView+Screenshot.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +142,6 @@
 				705F169E1A1F3E72001BD29D /* Images.xcassets */,
 				705F16A01A1F3E72001BD29D /* LaunchScreen.xib */,
 				705F169B1A1F3E72001BD29D /* Main.storyboard */,
-				705F16EE1A1F54C6001BD29D /* SChartGLView+Screenshot.h */,
-				705F16EF1A1F54C6001BD29D /* SChartGLView+Screenshot.m */,
 				705F16981A1F3E72001BD29D /* ViewController.h */,
 				705F16991A1F3E72001BD29D /* ViewController.m */,
 				705F16EA1A1F4594001BD29D /* Frameworks */,
@@ -365,7 +360,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				705F16F01A1F54C6001BD29D /* SChartGLView+Screenshot.m in Sources */,
 				705F169A1A1F3E72001BD29D /* ViewController.m in Sources */,
 				705F16971A1F3E72001BD29D /* AppDelegate.m in Sources */,
 				705F16941A1F3E72001BD29D /* main.m in Sources */,
