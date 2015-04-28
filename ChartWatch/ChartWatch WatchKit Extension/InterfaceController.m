@@ -23,7 +23,6 @@
         NSURL *baseUrl = [defaultManager containerURLForSecurityApplicationGroupIdentifier:@"group.ShareAlike"];
         self.chartImageFileURL = [baseUrl URLByAppendingPathComponent:@"chartImageData.png"
                                                           isDirectory:NO];
-        
         [NSFileCoordinator addFilePresenter:self];
     }
     return self;
@@ -51,9 +50,7 @@
         NSLog(@"Chart image not available at %@. Error: %@", self.chartImageFileURL, error.debugDescription);
         return;
     }
-    
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.chartImageFileURL]];
-    [self.imageView setImage:image];
+    [self.imageView setImageData:[NSData dataWithContentsOfURL:self.chartImageFileURL]];
 }
 
 @end
