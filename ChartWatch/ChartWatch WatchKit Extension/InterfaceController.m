@@ -16,8 +16,8 @@
 
 @implementation InterfaceController
 
-- (instancetype)initWithContext:(id)context {
-    self = [super initWithContext:context];
+- (instancetype)init {
+    self = [super init];
     if (self) {
         NSFileManager *defaultManager = [NSFileManager defaultManager];
         NSURL *baseUrl = [defaultManager containerURLForSecurityApplicationGroupIdentifier:@"group.ShareAlike"];
